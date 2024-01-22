@@ -36,14 +36,24 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'gii' => 'gii',
+                'gii/<controller:[\w\-]+>/<action:[\w\-]+>' => 'gii/<controller>/<action>',
             ],
         ],
-        */
     ],
     'params' => $params,
+    'modules' => [
+        'gii' => [
+            'class' => 'yii\gii\Module',
+            'allowedIPs' => ['*'], // adjust this to your needs
+            'generators' => [
+                // add your generators here
+            ],
+        ],
+    ],
+    
 ];

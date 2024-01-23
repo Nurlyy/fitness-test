@@ -38,8 +38,8 @@ AppAsset::register($this);
         ]);
         if (!Yii::$app->user->isGuest) {
             $menuItems = [
-                ['label' => 'Клиенты', 'url' => ['/site/clients']],
-                ['label' => 'Клубы', 'url' => ['/site/clubs']],
+                ['label' => 'Клиенты', 'url' => ['/clients']],
+                ['label' => 'Клубы', 'url' => ['/clubs']],
             ];
         }
 

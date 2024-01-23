@@ -44,6 +44,16 @@ return [
                 'gii/<controller:[\w\-]+>/<action:[\w\-]+>' => 'gii/<controller>/<action>',
             ],
         ],
+        'assetManager' => [
+            'bundles' => [
+                // ... other configurations
+                'yii\web\JqueryAsset' => [
+                    'jsOptions' => [
+                        'position' => \yii\web\View::POS_HEAD,
+                    ],
+                ],
+            ],
+        ],
     ],
     'params' => $params,
     'modules' => [
@@ -55,5 +65,6 @@ return [
             ],
         ],
     ],
-    
+
+
 ];
